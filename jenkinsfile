@@ -67,7 +67,7 @@ stages {
 }
 post {
        success {
-            archiveArtifacts 'gameoflife-web/target/*.war'
+            archiveArtifacts '/target/*.war'
         }
        failure {
            mail to:"gowthamtpr26@gmail.com", subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "Build failed"
